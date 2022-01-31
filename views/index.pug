@@ -1,10 +1,20 @@
 html
     head
+        style(type="text/css").
+            body{
+                text-align: center;
+            }
+            h2 {
+                color: teal;
+            }
+            em{
+                color: #9a2222;
+            }
     body
         div
             h2 The Number Quiz
         div
-            strong Your current score is  #{score}.
+            em Your current score is  #{score}.
             p Guess the next number in the sequence
             p #{sequence}
 
@@ -14,4 +24,6 @@ html
                 input(type='number', name='answer', value='')
                 input(type='hidden', name='score', value=score)
                 input(type='hidden', name='index', value=index)
+                br
+                br
                 input(type='submit', value='Submit')
