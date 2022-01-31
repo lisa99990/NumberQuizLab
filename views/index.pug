@@ -1,0 +1,17 @@
+html
+    head
+    body
+        div
+            h2 The Number Quiz
+        div
+            strong Your current score is  #{score}.
+            p Guess the next number in the sequence
+            p #{sequence}
+
+        div
+            form(action='/examine', method='POST')
+                p Your Answer: 
+                input(type='number', name='answer', value='')
+                input(type='hidden', name='score', value=score)
+                input(type='hidden', name='index', value=index)
+                input(type='submit', value='Submit')
